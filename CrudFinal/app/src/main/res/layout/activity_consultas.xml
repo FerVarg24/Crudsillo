@@ -40,20 +40,6 @@
         android:layout_y="106dp" />
 
     <EditText
-        android:id="@+id/Liga"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_x="141dp"
-        android:layout_y="165dp" />
-
-    <EditText
-        android:id="@+id/equipo"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_x="141dp"
-        android:layout_y="227dp" />
-
-    <EditText
         android:id="@+id/edad"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
@@ -115,4 +101,18 @@
         android:layout_y="457dp"
         android:minWidth="200px"
         android:minHeight="200px" />
+
+    <Spinner
+        android:id="@+id/liga"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_x="177dp"
+        android:layout_y="178dp" />
+
+    <Spinner
+        android:id="@+id/equipo"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_x="177dp"
+        android:layout_y="233dp" />
 </AbsoluteLayout>

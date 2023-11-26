@@ -30,6 +30,7 @@ public class Altas extends AppCompatActivity implements View.OnClickListener {
 
     String posisele;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,16 +49,16 @@ public class Altas extends AppCompatActivity implements View.OnClickListener {
         inic = findViewById(R.id.Tit);
         banca = findViewById(R.id.banc);
         posi = findViewById(R.id.start);
-        String hor = "inicial";
+
         posi.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-            RadioButton boton = findViewById(checkedId);
+                RadioButton boton = findViewById(checkedId);
 
-            if(boton != null)
-            {
-                posisele = boton.getText().toString();
-            }
+                if(boton != null)
+                {
+                    posisele = boton.getText().toString();
+                }
             }
         });
 
@@ -162,13 +163,20 @@ public class Altas extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+
+        int radioID = posi.getCheckedRadioButtonId();
+        if (radioID != -1){
+            RadioButton rSelec = findViewById(radioID);
+            posisele = rSelec.getText().toString();
+        }
+
      String cadenita = ((Button)v).getText().toString();
      if (cadenita.equals("Regresar"))
      {
          Intent intentito = new Intent(this, MainActivity.class);
          startActivity(intentito);
      } else if (cadenita.equals("Alta")) {
-         Base admin = new Base(this, "administracion", null, 1);
+         Base admin = new Base(this, "adminsillo", null, 1);
          SQLiteDatabase basededatos = admin.getWritableDatabase();
          String cod = eClave.getText().toString();
          String des = eDesc.getText().toString();

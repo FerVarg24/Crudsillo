@@ -54,7 +54,7 @@ public class Bajas extends AppCompatActivity implements View.OnClickListener {
             String clave = eClave.getText().toString();
 
 
-            Base admin = new Base(this, "administracion", null, 1);
+            Base admin = new Base(this, "adminsillo", null, 1);
             SQLiteDatabase basededatos = admin.getWritableDatabase();
 
 

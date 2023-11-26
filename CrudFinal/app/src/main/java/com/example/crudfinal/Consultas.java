@@ -54,7 +54,7 @@ public class Consultas extends AppCompatActivity implements View.OnClickListener
             String clave = eClave.getText().toString();
 
 
-            Base admin = new Base(this, "administracion", null, 1);
+            Base admin = new Base(this, "adminsillo", null, 1);
             SQLiteDatabase basededatos = admin.getWritableDatabase();
 
             Cursor cursor = basededatos.rawQuery("SELECT * FROM jugadores WHERE codigo = ?", new String[]{clave});
@@ -65,7 +65,7 @@ public class Consultas extends AppCompatActivity implements View.OnClickListener
                 eDesc.setText(cursor.getString(cursor.getColumnIndex("descripcion")));
                 liga.setText(cursor.getString(cursor.getColumnIndex("liga")));
                 equipo.setText(cursor.getString(cursor.getColumnIndex("equipo")));
-                inicial.setText("Inicial");
+                inicial.setText(cursor.getString(cursor.getColumnIndex("posi")));
                 edad.setText(String.valueOf(cursor.getDouble(cursor.getColumnIndex("edad"))));
 
                 mostrarImagen(cursor.getString(cursor.getColumnIndex("equipo")));

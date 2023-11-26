@@ -18,7 +18,7 @@ public class Cambios extends AppCompatActivity implements View.OnClickListener {
     EditText eClave, eDesc, liga, equipo, edad, posi;
     Button bBuscar, bRegr;
     ImageView imagen;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,7 @@ public class Cambios extends AppCompatActivity implements View.OnClickListener {
         bRegr = findViewById(R.id.bregresar);
         bRegr.setOnClickListener(this);
         eDesc = findViewById(R.id.eDesc);
-        liga = findViewById(R.id.Liga);
+        liga = findViewById(R.id.liga);
         equipo = findViewById(R.id.equipo);
         edad = findViewById(R.id.edad);
         posi = findViewById(R.id.starter);
@@ -55,7 +55,7 @@ public class Cambios extends AppCompatActivity implements View.OnClickListener {
             String clave = eClave.getText().toString();
 
 
-            Base admin = new Base(this, "administracion", null, 1);
+            Base admin = new Base(this, "adminsillo", null, 1);
             SQLiteDatabase basededatos = admin.getWritableDatabase();
 
             Cursor cursor = basededatos.rawQuery("SELECT * FROM jugadores WHERE codigo = ?", new String[]{clave});
