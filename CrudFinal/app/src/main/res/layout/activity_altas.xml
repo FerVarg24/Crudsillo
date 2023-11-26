@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Altas">
+
+    <EditText
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_x="33dp"
+        android:layout_y="43dp"
+        android:hint="Clave Del Jugador"
+        android:id="@+id/clave"/>
+
+    <EditText
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_x="31dp"
+        android:layout_y="108dp"
+        android:hint="Nombre del Jugador"
+        android:id="@+id/desc"/>
+
+    <Spinner
+        android:id="@+id/Liga"
+        android:layout_width="99dp"
+        android:layout_height="46dp"
+        android:layout_x="34dp"
+        android:layout_y="173dp" />
+
+    <Spinner
+        android:id="@+id/Equipo"
+        android:layout_width="180dp"
+        android:layout_height="39dp"
+        android:layout_x="214dp"
+        android:layout_y="176dp" />
+
+    <RadioGroup
+        android:id="@+id/start"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:layout_x="91dp"
+        android:layout_y="497dp"
+        android:orientation="horizontal">
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_x="37dp"
+        android:layout_y="232dp"
+        android:text="Inicial:" />
+
+    <EditText
+        android:id="@+id/edad"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_x="201dp"
+        android:layout_y="249dp"
+        android:hint="Edad" />
+
+    <Button
+        android:id="@+id/alta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="53dp"
+        android:layout_y="649dp"
+        android:text="Alta" />
+
+    <Button
+        android:id="@+id/regresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="189dp"
+        android:layout_y="651dp"
+        android:text="Regresar" />
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="358dp"
+        android:layout_height="192dp"
+        android:layout_x="16dp"
+        android:layout_y="372dp"
+        android:visibility="invisible" />
+
+    <RadioButton
+        android:id="@+id/Tit"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_x="36dp"
+        android:layout_y="257dp"
+        android:text="Titular" />
+
+    <RadioButton
+        android:id="@+id/banc"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_x="35dp"
+        android:layout_y="315dp"
+        android:text="Banca" />
+
+</AbsoluteLayout>
